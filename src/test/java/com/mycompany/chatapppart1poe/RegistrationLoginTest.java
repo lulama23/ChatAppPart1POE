@@ -99,3 +99,5 @@ public class RegistrationLoginTest {
         assertFalse(reg.checkCellPhoneNumber());
     }
 }
+
+// Updated for commit #5

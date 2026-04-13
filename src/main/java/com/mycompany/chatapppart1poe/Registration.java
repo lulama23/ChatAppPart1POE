@@ -67,3 +67,5 @@ public class Registration {
     public String getFirstName() { return firstName; }
     public String getLastName() { return lastName; }
 }
+
+// Updated for commit #2

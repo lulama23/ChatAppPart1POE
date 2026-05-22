@@ -114,3 +114,4 @@ public class Message {
     public boolean isSent() { return sent; }
     public boolean isStored() { return stored; }
 }
+//Add Message class with ID generation, hash, validation, and JSON storage methods

@@ -80,3 +80,4 @@ public class MessageTest {
         assertFalse(msg.isStored());
     }
 }
+//Add JUnit 5 unit tests for Message class (length, recipient, hash, ID, actions)

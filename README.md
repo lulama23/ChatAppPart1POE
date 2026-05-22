@@ -1,44 +1,48 @@
-# ChatApp – Part 1: Registration and Login
+# ChatApp – Part 2: Sending Messages
 
 **PROG5121 Proof of Portfolio (PoE)**  
-A console‑based user registration and login system, built with **Java** and **Maven**, following clean code and test‑driven principles.
+Console‑based messaging system built on top of the registration & login feature from Part 1.
 
 ---
 
-##Features
+##  New Features in Part 2
 
-- **User Registration**  
-  - Validate username (must contain `_` and be ≤5 characters)  
-  - Validate password (≥8 chars, one capital, one number, one special character)  
-  - Validate South African cell phone number (must start with `+27` followed by 9 digits)  
-
-- **User Login**  
-  - Verify stored username and password  
-  - Display personalised welcome message on success  
-
-- **Automated Unit Tests**  
-  - 14 JUnit 5 tests covering all validation and login logic  
-  - Tests match the exact specification tables (assertEquals / assertTrue / assertFalse)
-
----
-
-##Technologies
-
-- **Java 17**  
-- **Maven** (build automation)  
-- **JUnit 5** (unit testing)  
-- **Git** (version control, hosted on GitHub)
+- **Post‑login Messaging Menu** – “Welcome to QuickChat”
+- **Send Messages** with:
+  - Auto‑generated **10‑digit Message ID**
+  - Auto‑incremented **Message Number** (per message entered)
+  - Recipient cell number validation (South African `+27` format)
+  - Message text **≤250 characters** (with error message if exceeded)
+  - Auto‑generated **Message Hash** – format: `first2IDdigits:messageNumber:firstwordlastword` (all caps)
+- **Send / Store / Disregard** options when a message is ready:
+  - *Send* → marks as sent, stores in `messages.json` (JSON)
+  - *Store* → saves without sending
+  - *Disregard* → user cancels
+- **Display full message** after sending: ID, Hash, Recipient, Message
+- **Total messages sent** counter (accumulates across all runs – static variable)
+- **JSON persistence** – each message saved to `messages.json` with status (`SENT` or `STORED`)
+- **Unit tests** (JUnit 5) for all core logic
+- **GitHub Actions** – automated test runner on every push
 
 ---
 
-##Getting Started
+##  Technologies
+
+- Java 17
+- Maven
+- JUnit 5
+- JSON.simple (for file storage)
+- Git & GitHub (feature branch `feature/messaging`)
+- GitHub Actions (CI)
+
+---
+
+##  Getting Started (Part 2)
 
 ### Prerequisites
-- JDK 17 or later  
-- Maven (or use the Maven wrapper included)  
-- Git (optional, for cloning)
+- Part 1 code (Registration & Login) already working
+- Java 17, Maven, Git
+- (Optional) GitHub Desktop
 
-### Clone the Repository
+### Clone & switch to feature branch
 ```bash
-git clone https://github.com/your-username/ChatAppPart1PoE.git
-cd ChatAppPart1PoE

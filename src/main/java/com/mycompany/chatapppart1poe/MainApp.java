@@ -125,3 +125,4 @@ public class MainApp {
     }
 }
 //Extend Main with QuickChat menu, message loop, and send/store/disregard logic
+// Part 2 completed with loops, message handling, and JSON storage

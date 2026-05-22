@@ -124,3 +124,4 @@ public class MainApp {
         System.out.println("Overall total messages sent (across all runs): " + Message.returnTotalMessages());
     }
 }
+//Extend Main with QuickChat menu, message loop, and send/store/disregard logic

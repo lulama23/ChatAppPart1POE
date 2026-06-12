@@ -155,3 +155,4 @@ public class MessageStore {
     public static List<String> getMessageIDs() { return messageIDs; }
     public static List<String> getRecipients() { return recipients; }
 }
+//Complete MessageStorage
